@@ -94,7 +94,7 @@ const newUserOauth = async (data) => {
       return message;
     }
     //await newUserEmail(name, email);
-    const token = jwt.sign({ id, role, name }, PASSWORD_JWT);
+    const token = jwt.sign({ id, role, name: given_name, lastName: family_name }, PASSWORD_JWT);
     return token;
 };
 
