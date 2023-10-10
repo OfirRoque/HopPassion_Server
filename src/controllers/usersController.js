@@ -80,6 +80,7 @@ const getAllUsers = async () => {
 // registro OAuth2: se utiliza para procesar y autenticar a un usuario que inicia sesión a través de Google OAuth2. 
 const newUserOauth = async (data) => {
     const { email, given_name, family_name, sub } = await decodeTokenOauth(data);
+    console.log({ email, given_name, family_name, sub });
     const [{ id, role }, created] = await User.findOrCreate({
       where: { email },
       defaults: {
