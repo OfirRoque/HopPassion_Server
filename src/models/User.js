@@ -59,7 +59,7 @@ module.exports = (sequelize) => {
     //// Método para cifrar la contraseña antes de guardarla en la base de datos:
     User.beforeCreate(async (user) => {
         const saltRounds = 10;// Número de rondas de sal para el cifrado
-        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
+        const hashedPassword = await bcrypt.hash(user.password || "clave_segura", saltRounds);
         user.password = hashedPassword;
     });
 
