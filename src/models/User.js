@@ -16,11 +16,11 @@ module.exports = (sequelize) => {
             },
             lastName: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             address: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             email: {
                 type: DataTypes.STRING,
@@ -31,7 +31,7 @@ module.exports = (sequelize) => {
             },
             phone: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             role: {
                 type: DataTypes.ENUM,
@@ -41,7 +41,7 @@ module.exports = (sequelize) => {
             },
             password: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: true,
             },
             googleId: {
                 type: DataTypes.STRING,
