@@ -94,9 +94,10 @@ const newUserOauth = async (data) => {
       const message = "User Already exist";
       return message;
     }
+    console.log("el usuario se creo con exito");
     //await newUserEmail(name, email);
-    const token = jwt.sign({ id, role, name: given_name, lastName: family_name }, PASSWORD_JWT);
-    return token;
+    //const token = jwt.sign({ id, role, name: given_name, lastName: family_name }, PASSWORD_JWT);
+    //return token;
 };
 
 //login OAuth: controlador de autenticación que se utiliza para autenticar a un usuario que ha iniciado sesión a través de OAuth
